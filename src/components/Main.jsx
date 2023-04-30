@@ -16,18 +16,22 @@ const Main = () => {
           <li>
             <span>Виджеты</span>
             <p>30 готовых решений</p>
+            <div className="mobile-li">Skype Аудит</div>
           </li>
           <li>
             <span>Dashboard</span>
             <p>с показателями вашего бизнеса</p>
+            <div className="mobile-li">30 виджетов</div>
           </li>
           <li>
             <span>Skype Аудит</span>
             <p>отдела продаж и CRM системы</p>
+            <div className="mobile-li">Dashboard</div>
           </li>
           <li>
             <span>35 дней</span>
             <p>использования CRM</p>
+            <div className="mobile-li">Месяц аmoCRM</div>
           </li>
         </ul>
         <button>Получить консультацию</button>
