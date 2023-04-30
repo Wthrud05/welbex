@@ -1,90 +1,293 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
 $white: #E4E5EA;
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: #0e1014;
   font-family: 'Inter', sans-serif;
+  color: $white;
 }
 
 #root {
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1440px;
   margin: 0 auto;
-}
+  padding: 0 150px;
 
-.header {
-  margin-top: 46px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: $white;
+  .purple-blur {
+    position: absolute;
+    top: -159px;
+    left: 50%;
+    transform: translate(-60%, 0);
+  
+    background-color: #833AB4;
+    filter: blur(200px);
+  
+    width: 259px;
+    height: 259px;
+  }
+  
+  .red-blur {
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    transform: translate(0, 30%);
+  
+    background-color: #961A1A;
+    filter: blur(200px);
+  
+    width: 259px;
+    height: 259px;
+  }
+  
+  .red-ball {
+    position: absolute;
+    top: 83px;
+    left: 550px;
+  }
+  
+  .purple-ball {
+    position: absolute;
+    left: 868px;
+  }
+  
+  .red-ball-mini {
+    position: absolute;
+    top: 547px;
+    left: 851px;
+  }
 
-  &-logo {
+  .header {
+    padding-top: 46px;
     display: flex;
-    flex-direction: column;
-
-    img {
-      width: 140px;
-      height: 24px;
-      margin-bottom: 10px;
+    justify-content: space-between;
+  
+    &-logo {
+      display: flex;
+      flex-direction: column;
+  
+      img {
+        width: 140px;
+        height: 24px;
+        margin-bottom: 10px;
+      }
+  
+      span {
+        width: 140px;
+        font-size: 10px;
+      }
     }
-
-    span {
-      width: 140px;
-      font-size: 10px;
+  
+    nav {
+      height: 19px;
+      display: flex;
+      align-items: center;
+  
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        li {
+          font-size: 16px;
+          margin-right: 30px;
+          cursor: pointer;
+          cursor: pointer;
+  
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  
+    .contacts {
+      
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        li {
+          margin-right: 30px;
+          font-size: 16px;
+          cursor: pointer;
+  
+          &:first-child {
+            margin-right: 47px;
+          }
+  
+          &:last-child {
+            margin-right: 0;
+          }
+  
+          a {
+            text-decoration: none;
+            color: $white;
+          }
+        }
+      }
     }
   }
 
-  nav {
-    height: 19px;
+  .main {
+    width: 100%;
+    margin: 90px 0 124px 0;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+
+    &-left {
+      width: 362px;
+
+      h1 {
+        font-size: 48px;
+        font-weight: 400;
+      }
+
+      span {
+        font-size: 48px;
+        font-weight: 900;
+        background: linear-gradient(45deg, #FCB045, #FF3F78);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $white;
+      }
+      
+      p {
+        font-size: 18px;
+        width: 275px;
+        font-weight: 400;
+        margin-top: 30px;
+      }
+    }
+
+    &-right {
+      width: 291px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 40px;
+
+        span {
+          background: linear-gradient(45deg, #FCB045, #FD1D1D);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 60px;
+
+        li {
+          text-align: right;
+
+          span {
+            font-size: 18px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+
+      button {
+        width: 262px;
+        height: 61px;
+        background-color: #4077F3;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: $white;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+
+    h5 {
+      font-size: 14px;
+      color: #656566;
+      margin-bottom: 20px;
+    }
 
     ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
       li {
-        font-size: 16px;
-        margin-right: 30px;
+        margin-bottom: 10px;
         cursor: pointer;
+      }
+    }
+
+    .menu {
+      
+      &-lists {
+        display: flex;
+        justify-content: space-between;
+      }
+
+
+      ul {
+        margin-right: 52px;
 
         &:last-child {
           margin-right: 0;
         }
       }
     }
-  }
 
-  .contacts {
-    
-    ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .contacts {
+      text-align: right;
 
-      li {
-        margin-right: 30px;
-        font-size: 16px;
-        cursor: pointer;
+      ul {
 
-        &:first-child {
-          margin-right: 47px;
+        li {
+          a {
+            text-decoration: none;
+            color: $white;
+          }
         }
 
-        &:last-child {
-          margin-right: 0;
-        }
+        .social {
+          display: flex;
+          justify-content: flex-end;
 
-        a {
-          text-decoration: none;
-          color: $white;
+          li {
+            margin-right: 10px;
+
+            &:last-child {
+              margin-right: 0;
+              cursor: default;
+            }
+          }
         }
       }
     }
