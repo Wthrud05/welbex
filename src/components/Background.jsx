@@ -5,7 +5,7 @@ import redballMini from '../assets/images/redball-mini.png'
 
 const Background = () => {
   return (
-    <div>
+    <div className="background">
       <div className="purple-blur"></div>
       <div className="red-blur"></div>
       <img className="red-ball" src={redball} alt="redball" />

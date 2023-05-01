@@ -24,6 +24,9 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 150px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
   .purple-blur {
     position: absolute;
@@ -149,6 +152,7 @@ body {
     margin: 90px 0 124px 0;
     display: flex;
     justify-content: space-between;
+    flex: 1 1 auto;
 
     &-left {
       width: 362px;

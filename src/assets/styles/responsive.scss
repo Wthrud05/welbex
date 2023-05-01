@@ -8,6 +8,14 @@
       }
     }
   }
+
+  .footer {
+    .chapters {
+      div {
+        margin-left: 5px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1080px) {
@@ -116,6 +124,7 @@
     .main {
       flex-direction: column;
       align-items: center;
+      justify-content: center;
 
 
       margin: 0 auto;
@@ -226,6 +235,15 @@
 
 @media (max-width: 560px) {
   .container {
+    .main-left {
+      width: 352px;
+    }
+
+    .main-right {
+      width: 352px !important;
+    }
+
+
     .footer {
       display: block;
 
